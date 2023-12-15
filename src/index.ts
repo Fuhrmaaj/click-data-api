@@ -13,10 +13,9 @@ const regexNullChars = /\0/g;
 // Remove repeat lines
 const regexLines = /(\n|\r)(\n|\r)/g;
 
-data = data.replace(regexHeader, '')
-    .replaceAll(regexNullChars, '')
-    .replaceAll(regexLines, '\n');
-console.log(data);
+data = data.replaceAll(regexNullChars, '')
+    .replaceAll(regexLines, '\n')
+    .replace(regexHeader, '');
 
 // Write the modified data to a .csv
 fs.writeFileSync('./test_data/test.csv', data);
