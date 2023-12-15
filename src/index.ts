@@ -1,12 +1,22 @@
-const world = 'world';
+import * as fs from 'fs';
 
-function hello(who: string): string {
-  return `Hello ${who}!`;
-}
+// Read the input .cdv provided by the user
+let data = fs.readFileSync('./test_data/test.cdv', 'utf8');
 
-console.log(hello(world), " ", process.argv.length);
+/* Remove the garbage which prevents the data from being read as a .csv */
+// Remove the header line
+const regexHeader = /^(.*)\n/;
 
-if (process.argv.length < 3) {
-    console.error('Expected at least one filename as a CLI argument.');
-    process.exit(1);
-}
+// Remove all the null characters
+const regexNullChars = /\0/g;
+
+// Remove repeat lines
+const regexLines = /(\n|\r)(\n|\r)/g;
+
+data = data.replace(regexHeader, '')
+    .replaceAll(regexNullChars, '')
+    .replaceAll(regexLines, '\n');
+console.log(data);
+
+// Write the modified data to a .csv
+fs.writeFileSync('./test_data/test.csv', data);

@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "An API between CLICK PLCs and data interpreters",
   "main": "index.js",
+  "type": "module",
   "scripts": {
     "build": "rimraf ./build && tsc",
     "lint": "eslint . --ext .ts",
