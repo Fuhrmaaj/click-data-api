@@ -1,6 +1,6 @@
 {
   "name": "click-data-api",
-  "version": "1.0.0",
+  "version": "0.1.0",
   "description": "An API between CLICK PLCs and data interpreters",
   "main": "index.js",
   "type": "module",
