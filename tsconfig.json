@@ -1,7 +1,7 @@
 {
   "compilerOptions": {
-    "target": "es2016",
-    "lib": ["ESNext"],
+    "target": "esnext",
+    "lib": ["esnext"],
     // "experimentalDecorators": true,                   /* Enable experimental support for legacy experimental decorators. */
     // "emitDecoratorMetadata": true,                    /* Emit design-type metadata for decorated declarations in source files. */
     // "noLib": true,                                    /* Disable including any library files, including the default lib.d.ts. */
@@ -9,9 +9,9 @@
     // "moduleDetection": "auto",                        /* Control what method is used to detect module-format JS files. */
 
     /* Modules */
-    "module": "ESNext",                                 /* Specify what module code is generated. */
+    "module": "NodeNext",                                 /* Specify what module code is generated. */
     "rootDir": "./src",
-    "moduleResolution": "Node",                     /* Specify how TypeScript looks up a file from a given module specifier. */
+    "moduleResolution": "NodeNext",                     /* Specify how TypeScript looks up a file from a given module specifier. */
     // "baseUrl": "./",                                  /* Specify the base directory to resolve non-relative module names. */
     // "paths": {},                                      /* Specify a set of entries that re-map imports to additional lookup locations. */
     // "rootDirs": [],                                   /* Allow multiple folders to be treated as one when resolving modules. */
