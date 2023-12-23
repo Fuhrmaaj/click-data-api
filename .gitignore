@@ -1,8 +1,6 @@
 # dependencies
 /node_modules
 
-# testing
-/test_data
-
 # production
 /build
+/log_data
