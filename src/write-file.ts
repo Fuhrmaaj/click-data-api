@@ -33,13 +33,13 @@ function filenameCheck(name: string): boolean {
   return true;
 }
 
-// Ask the user to name the output file
-let fileDestination: string = userQuery();
-
 // Test that the output name is valid
 let nameTest: boolean = false;
 
+let fileDestination: string = '';
+
 while (nameTest == false) {
+  // Ask the user for the name of the output
   fileDestination = userQuery();
   nameTest = filenameCheck(fileDestination);
 }
