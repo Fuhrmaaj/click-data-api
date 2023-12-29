@@ -36,7 +36,7 @@ function filenameCheck(name: string): boolean {
 // Test that the output name is valid
 let nameTest: boolean = false;
 
-let fileDestination = '';
+let fileDestination: string = '';
 
 while (nameTest == false) {
   // Ask the user for the name of the output
