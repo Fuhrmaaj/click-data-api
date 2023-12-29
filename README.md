@@ -2,7 +2,7 @@
 
 An API between CLICK PLCs and data interpreters
 
-#### Video Demo: <URL HERE>
+#### Video Demo: <https://www.loom.com/share/379334c53a9540caab2403d7978e38f4?sid=03dce93d-1bc9-412d-88ed-8f2c179e0c98>
 
 #### Description:
 
