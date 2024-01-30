@@ -1,30 +1,40 @@
-# click-data-api
+# CLICK-Data-API
 
-An API between CLICK PLCs and data interpreters
+This is a command-line tool which converts PLC data to be readable by a personal computer and unlocks data logging capabilities. Hit the project with a star if you find it useful! :star:
 
-#### Video Demo: <https://www.loom.com/share/379334c53a9540caab2403d7978e38f4?sid=03dce93d-1bc9-412d-88ed-8f2c179e0c98>
+### Why?
 
-#### Description:
+PLCs are the industrial standard automation devices, but are only accessible in limited ways through proprietary software. CLICK PLCs manufactured by [AutomationDirect]<https://www.automationdirect.com/adc/home/home> are favoured by small business because they are significantly cheaper and their programming software is free, rather than subscription-based. `CLICK Data API` is a tool which allows you to convert data exported by the PLC's Data View into a format which can be read by office programs such as Microsoft Excel, Google Sheets, or even Notepad!
 
-This program is an MVP proof-of-concept to demonstrate the possibilities for PLC data logging.
+The standard method of data logging and collection is to buy expensive HMI (Human-Machine Interface) modules, or buy subscription HMI software. The most basic versions of these are over $500 and only log 16 data trends. This tool will allow a control technician to log an amount of data only limited by the amount of memory in their PLCs - all completely free!
 
-AutomationDirect <https://www.automationdirect.com/adc/home/home> produces a line of PLCs for automation and industrial controls under the CLICK brand. These PLCs can output their data view to a .cdv file, but this file type cannot be read by most programs. Industrial controls software is currently only available for Windows operating systems.
-
-The CLICK Data API currently does three things:
-
-1. It will convert the data to a .csv format so that it can be read by the controls technician.
-
-2. Data logging is typically only available with the purchase and installation of a Human-Machine Interface, costing roughly $500 CAD. If the only interest of the factory is data logging, then money can be saved on an HMI.
-
-3. The C-More EA9 headless HMI can only log 16 trends, due to storage limitations with industrial systems. The CLICK Data API will allow controls technicians to potentially log an unlimited amount of data within a factory by tasking the PLC to log to the data view, then exporting the data view to a .cdv, then running this program to add the data to their server. This means the factory will not need to buy and configure additional HMIs if logging data is the only concern.
-
-#### How to use this program:
+### How to use this program:
 
 Put any file you wish to convert into /click-data-api/log_data
 
-Run
-npm run start
+Then navigate to the program's directory in the terminal and type
+
+`npm run start`
 
 You will be prompted to type the name of the file you wish to convert (it is not necessary to type ".cdv").
 
 You will then be prompted to name the output file. Only type the filename without the file extension (ie. Do not put ".csv" at the end of your filename).
+
+### Contributing
+
+#### Clone the repo
+
+```bash
+git clone https://github.com/Fuhrmaaj/click-data-api.git
+cd click-data-api
+```
+
+#### Build and run the project
+
+Prepare data by exporting it from the CLICK PLC data view and placing it into /click-data-api/log_data
+
+Then:
+
+```bash
+npm run start
+```
